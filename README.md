@@ -1,3 +1,7 @@
+## Algorithms
+
+* [Array/String](https://github.com/mathusanMe/LeetCode#Array\/String)
+
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
