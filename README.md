@@ -3,6 +3,7 @@
 * [Array/String](https://github.com/mathusanMe/LeetCode#Array\/String)
 * [Two Pointers](https://github.com/mathusanMe/LeetCode#Two-Pointers)
 * [Sliding Window](https://github.com/mathusanMe/LeetCode#Sliding-Window)
+* [Matrix](https://github.com/mathusanMe/LeetCode#Matrix)
 
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -18,3 +19,9 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Python](./Python/minimum-size-subarray-sum.py) | _O(n)_ | _O(1)_ | Medium ||  |
+
+## Matrix
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
+36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [Python](./Python/valid-sudoku.py) | _O(1)_ | _O(1)_ | Medium ||  |
+
