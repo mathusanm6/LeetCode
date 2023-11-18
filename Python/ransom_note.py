@@ -5,8 +5,10 @@ class Solution(object):
         :type magazine: str
         :rtype: bool
         """
+
         def index(c):
-            return ord(c)- ord('a')
+            return ord(c) - ord("a")
+
         count_l = [0] * 26
         for c in magazine:
             count_l[index(c)] += 1

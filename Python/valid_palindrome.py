@@ -4,15 +4,16 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+
         def isAlnumChar(c):
-            if ord('0') <= ord(c) <= ord('9'):
+            if ord("0") <= ord(c) <= ord("9"):
                 return True
-            if ord('a') <= ord(c) <= ord('z'):
+            if ord("a") <= ord(c) <= ord("z"):
                 return True
-            if ord('A') <= ord(c) <= ord('Z'):
+            if ord("A") <= ord(c) <= ord("Z"):
                 return True
             return False
-        
+
         l, r = 0, len(s) - 1
         s = s.lower()
 
@@ -24,7 +25,7 @@ class Solution(object):
             if not isAlnumChar(s_r):
                 r -= 1
                 continue
-            
+
             if s_l != s_r:
                 return False
             l += 1
