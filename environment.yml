@@ -1,0 +1,15 @@
+name: myenv
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - flask
+  - pytest
+  - flake8
+  - python=3.10
+  - pip
+  - pip:
+      - some-pip-package
