@@ -5,6 +5,7 @@
 * [Sliding Window](https://github.com/mathusanMe/LeetCode#Sliding-Window)
 * [Matrix](https://github.com/mathusanMe/LeetCode#Matrix)
 * [HashMap](https://github.com/mathusanMe/LeetCode#HashMap)
+* [Intervals](https://github.com/mathusanMe/LeetCode#Intervals)
 
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -30,3 +31,8 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | [Python](./Python/ransom_note.py) | _O(n)_ | _O(1)_ | Easy || Fixed List |
+
+## Intervals
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
+228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Python](./Python/summary_ranges.py) | _O(n)_ | _O(n)_ | Easy |||
