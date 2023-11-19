@@ -1,3 +1,6 @@
+# Leetcode
+[![Python Package using Conda](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml)
+
 ## Algorithms
 
 * [Array/String](https://github.com/mathusanMe/LeetCode#Array\/String)
