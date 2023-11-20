@@ -9,6 +9,7 @@
 * [Matrix](https://github.com/mathusanMe/LeetCode#Matrix)
 * [HashMap](https://github.com/mathusanMe/LeetCode#HashMap)
 * [Intervals](https://github.com/mathusanMe/LeetCode#Intervals)
+* [Stack](https://github.com/mathusanMe/LeetCode#Stack)
 
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -39,3 +40,8 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Python](./Python/summary_ranges.py) | _O(n)_ | _O(n)_ | Easy |||
+
+## Stack
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
+20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [Python](./Python/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy |||
