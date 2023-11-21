@@ -10,6 +10,7 @@
 * [HashMap](https://github.com/mathusanMe/LeetCode#HashMap)
 * [Intervals](https://github.com/mathusanMe/LeetCode#Intervals)
 * [Stack](https://github.com/mathusanMe/LeetCode#Stack)
+* [Linked List](https://github.com/mathusanMe/LeetCode#Linked-List)
 
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -45,3 +46,8 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [Python](./Python/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy |||
+
+## Linked-List
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
+141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Python](./Python/linked_list_cycle.py) | _O(n)_ | _O(1)_ | Easy |||
