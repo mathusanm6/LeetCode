@@ -11,6 +11,7 @@
 * [Intervals](https://github.com/mathusanMe/LeetCode#Intervals)
 * [Stack](https://github.com/mathusanMe/LeetCode#Stack)
 * [Linked List](https://github.com/mathusanMe/LeetCode#Linked-List)
+* [Binary Tree General](https://github.com/mathusanMe/LeetCode#Binary-Tree-General)
 
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -51,3 +52,8 @@
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Python](./Python/linked_list_cycle.py) | _O(n)_ | _O(1)_ | Easy |||
+
+## Binary-Tree-General
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
+104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Python](./Python/maximum_depth_of_binary_tree.py) | _O(n)_ | _O(1)_ | Easy |DFS| Use FIFO for BFS |
