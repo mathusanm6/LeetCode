@@ -1,6 +1,14 @@
 # Leetcode
 [![Python CI (conda)](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml)
 
+## Description
+This repository contains my solutions to LeetCode problems. I will be updating this repository with my solutions as I solve more problems. I have included a test suite for each solution. 
+
+The test suite can be run using the following command in **the repository directory**:
+```bash
+pytest
+```
+
 ## Algorithms
 
 * [Array/String](https://github.com/mathusanMe/LeetCode#Array\/String)
