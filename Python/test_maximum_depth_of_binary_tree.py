@@ -1,6 +1,7 @@
 from maximum_depth_of_binary_tree import Solution
 from maximum_depth_of_binary_tree import TreeNode
 
+
 def test_maximum_depth_of_binary_tree():
     solution = Solution
 
