@@ -1,6 +1,7 @@
 from linked_list_cycle import Solution
 from linked_list_cycle import ListNode
 
+
 def test_linked_list_cycle():
     solution = Solution
 
