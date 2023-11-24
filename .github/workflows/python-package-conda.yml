@@ -23,10 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Test with pytest
+    - name: Install and run pytest
       run: |
-        conda update -n base -c defaults conda
         conda install pytest -y
+        source activate base
         pytest
 
   lint:
@@ -36,7 +36,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Lint with flake8
       run: |
-        conda update -n base -c defaults conda
         conda install flake8 -y
+        source activate base
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
