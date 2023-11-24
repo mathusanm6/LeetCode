@@ -20,7 +20,7 @@ pytest
 * [Stack](https://github.com/mathusanMe/LeetCode#Stack)
 * [Linked List](https://github.com/mathusanMe/LeetCode#Linked-List)
 * [Binary Tree General](https://github.com/mathusanMe/LeetCode#Binary-Tree-General)
-* [Binary Tree BFS](https://github.com/mathusanMe/LeetCode#Binary-Tree-BFS)
+* [Binary Search Tree](https://github.com/mathusanMe/LeetCode#Binary-Search-Tree)
 
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -67,7 +67,7 @@ pytest
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Python](./Python/maximum_depth_of_binary_tree.py) | _O(n)_ | _O(1)_ | Easy |DFS| Use FIFO for BFS |
 
-## Binary-Tree-BFS
+## Binary Search Tree
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | [Python](./Python/binary_tree_right_side_view.py) | _O(n)_ | _O(w)_ where _w_ is maximum width of the tree | Medium ||Tricky question that begs for clear understanding|
+530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | [Python](./Python/minimum_absolute_difference_in_bst.py) | _O(n)_ | _O(1)_ | Easy ||In-order traversal|
