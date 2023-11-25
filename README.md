@@ -26,59 +26,59 @@ pytest
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Python](./Python/merge_sorted_array.py) | _O(n + m)_ | _O(1)_ | Easy || Two-Pointers, Reverse |
+88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Python](./problems/easy/merge_sorted_array.py) | _O(n + m)_ | _O(1)_ | Easy || Two-Pointers, Reverse |
 
 ## Two-Pointers
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./Python/valid_palindrome.py) | _O(n)_ | _O(1)_ | Easy || |
+125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./problems/easy/valid_palindrome.py) | _O(n)_ | _O(1)_ | Easy || |
 
 ## Sliding-Window
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Python](./Python/minimum_size_subarray_sum.py) | _O(n)_ | _O(1)_ | Medium ||  |
+209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Python](./problems/medium/minimum_size_subarray_sum.py) | _O(n)_ | _O(1)_ | Medium ||  |
 
 ## Matrix
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [Python](./Python/valid_sudoku.py) | _O(1)_ | _O(1)_ | Medium ||  |
+36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [Python](./problems/medium/valid_sudoku.py) | _O(1)_ | _O(1)_ | Medium ||  |
 
 ## HashMap
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | [Python](./Python/ransom_note.py) | _O(n)_ | _O(1)_ | Easy || Fixed List |
+383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | [Python](./problems/easy/ransom_note.py) | _O(n)_ | _O(1)_ | Easy || Fixed List |
 
 ## Intervals
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Python](./Python/summary_ranges.py) | _O(n)_ | _O(n)_ | Easy |||
+228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Python](./problems/easy/summary_ranges.py) | _O(n)_ | _O(n)_ | Easy |||
 
 ## Stack
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [Python](./Python/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy |||
+20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [Python](./problems/easy/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy |||
 
 ## Linked-List
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Python](./Python/linked_list_cycle.py) | _O(n)_ | _O(1)_ | Easy |||
+141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Python](./problems/easy/linked_list_cycle.py) | _O(n)_ | _O(1)_ | Easy |||
 
 ## Binary-Tree-General
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Python](./Python/maximum_depth_of_binary_tree.py) | _O(n)_ | _O(1)_ | Easy |DFS| Use FIFO for BFS |
+104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Python](./problems/easy//maximum_depth_of_binary_tree.py) | _O(n)_ | _O(1)_ | Easy |DFS| Use FIFO for BFS |
 
 ## Binary-Tree-BFS
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | [Python](./Python/binary_tree_right_side_view.py) | _O(n)_ | _O(w)_ where w is the maximum width of the binary tree | Medium |||
+199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | [Python](./problems/medium/binary_tree_right_side_view.py) | _O(n)_ | _O(w)_ where w is the maximum width of the binary tree | Medium |||
 
 ## Binary-Search-Tree
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | [Python](./Python/minimum_absolute_difference_in_bst.py) | _O(n)_ | _O(1)_ | Easy ||In-order traversal|
+530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | [Python](./problems/easy/minimum_absolute_difference_in_bst.py) | _O(n)_ | _O(1)_ | Easy ||In-order traversal|
 
 ## Graph-General
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Python](./Python/number_of_islands.py) | _O(n * m)_ | _O(1)_ | Medium |||
+200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Python](./problems/medium/number_of_islands.py) | _O(n * m)_ | _O(1)_ | Medium |||
