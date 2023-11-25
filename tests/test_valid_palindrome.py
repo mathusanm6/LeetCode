@@ -5,16 +5,16 @@ def test_is_palindrome():
     solution = Solution()
 
     # Test Case 1
-    assert solution.isPalindrome("A man, a plan, a canal: Panama") == True
+    assert solution.isPalindrome("A man, a plan, a canal: Panama")
 
     # Test Case 2
-    assert solution.isPalindrome("") == True
+    assert solution.isPalindrome("")
 
     # Test Case 3
-    assert solution.isPalindrome("a") == True
+    assert solution.isPalindrome("a")
 
     # Test Case 4
-    assert solution.isPalindrome("race a car") == False
+    assert not solution.isPalindrome("race a car")
 
     # Test Case 5
-    assert solution.isPalindrome("Aa") == True
+    assert solution.isPalindrome("Aa")

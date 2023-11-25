@@ -1,7 +1,7 @@
 from problems.easy.merge_sorted_array import Solution
 
-def test_merge_sorted_array():
 
+def test_merge_sorted_array():
     solution = Solution()
 
     # Test Case 1
