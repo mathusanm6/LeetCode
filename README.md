@@ -21,6 +21,7 @@ pytest
 * [Linked List](https://github.com/mathusanMe/LeetCode#Linked-List)
 * [Binary Tree General](https://github.com/mathusanMe/LeetCode#Binary-Tree-General)
 * [Binary Search Tree](https://github.com/mathusanMe/LeetCode#Binary-Search-Tree)
+* [Graph General](https://github.com/mathusanMe/LeetCode#Graph-General)
 
 ## Array/String
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
@@ -67,7 +68,12 @@ pytest
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Python](./Python/maximum_depth_of_binary_tree.py) | _O(n)_ | _O(1)_ | Easy |DFS| Use FIFO for BFS |
 
-## Binary Search Tree
+## Binary-Search-Tree
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
 530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | [Python](./Python/minimum_absolute_difference_in_bst.py) | _O(n)_ | _O(1)_ | Easy ||In-order traversal|
+
+## Graph-General
+|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
+|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
+200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Python](./Python/number_of_islands.py) | _O($n \times m$)_ | _O(1)_ | Medium |||
