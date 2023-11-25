@@ -1,4 +1,4 @@
-from number_of_islands import Solution
+from problems.medium.number_of_islands import Solution
 
 
 def test_num_islands():
