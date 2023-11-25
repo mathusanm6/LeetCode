@@ -17,7 +17,7 @@ def test_valid_sudoku():
         [".", ".", ".", ".", "8", ".", ".", "7", "9"],
     ]
 
-    assert solution.isValidSudoku(board) == True
+    assert solution.isValidSudoku(board)
 
     # Testcase 2
     board = [
@@ -32,4 +32,4 @@ def test_valid_sudoku():
         [".", ".", ".", ".", "8", ".", ".", "7", "9"],
     ]
 
-    assert solution.isValidSudoku(board) == False
+    assert not solution.isValidSudoku(board)
