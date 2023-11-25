@@ -1,4 +1,4 @@
-from valid_parentheses import Solution
+from problems.easy.valid_parentheses import Solution
 
 
 def test_valid_parentheses():

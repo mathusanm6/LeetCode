@@ -1,5 +1,4 @@
-from binary_tree_right_side_view import Solution
-from binary_tree_right_side_view import TreeNode
+from problems.medium.binary_tree_right_side_view import Solution, TreeNode
 
 
 def test_right_side_view():
