@@ -76,4 +76,4 @@ pytest
 ## Graph-General
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Python](./Python/number_of_islands.py) | _O($n \times m$)_ | _O(1)_ | Medium |||
+200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Python](./Python/number_of_islands.py) | _O(n * m)_ | _O(1)_ | Medium |||
