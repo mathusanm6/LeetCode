@@ -21,7 +21,7 @@ class Solution:
 
             for i in range(1, 7):
                 n = node + i
-                if (n >= len(parent)):
+                if n >= len(parent):
                     continue
 
                 ft = (n - 1) // col_sz
@@ -36,7 +36,7 @@ class Solution:
                     n = v
                 if n in visited or v == node:
                     continue
-                
+
                 q.append(n)
                 visited.add(n)
                 parent[n] = node
