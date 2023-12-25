@@ -2,7 +2,7 @@ from collections import deque
 
 
 class Solution:
-    def snakesAndLadders(self, board: List[List[int]]) -> int:
+    def snakesAndLadders(self, board):
         # board size
         row_sz = len(board)
         col_sz = len(board[0])
