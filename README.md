@@ -28,10 +28,11 @@ pytest
 
 ## Array/String
 
-| #   | Title                                                                   | Solution                                        | Time       | Space  | Difficulty | Tag | Note                  |
-| --- | ----------------------------------------------------------------------- | ----------------------------------------------- | ---------- | ------ | ---------- | --- | --------------------- |
-| 88  | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Python](./problems/easy/merge_sorted_array.py) | _O(n + m)_ | _O(1)_ | Easy       |     | Two-Pointers, Reverse |
-| 135 | [Candy](https://leetcode.com/problems/candy/)                           | [Python](./problems/hard/candy.py)              | _O(n)_     | _O(n)_ | Hard       |     | Enjoyed solving it!   |
+| #   | Title                                                                     | Solution                                         | Time       | Space             | Difficulty | Tag | Note                                                                                      |
+| --- | ------------------------------------------------------------------------- | ------------------------------------------------ | ---------- | ----------------- | ---------- | --- | ----------------------------------------------------------------------------------------- |
+| 88  | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)   | [Python](./problems/easy/merge_sorted_array.py)  | _O(n + m)_ | _O(1)_            | Easy       |     | Two-Pointers, Reverse                                                                     |
+| 135 | [Candy](https://leetcode.com/problems/candy/)                             | [Python](./problems/hard/candy.py)               | _O(n)_     | _O(n)_            | Hard       |     | Enjoyed solving it!                                                                       |
+| 42  | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [Python _O(n)_](./problems/hard/trapping_rain_water_o_n.py), [Python _O(1)_](./problems/hard/trapping_rain_water_o_1.py) | _O(n)_     | _O(n)_ or _O(1)_ | Hard       |     | Initially proposed an O(n) space complexity solution, but discovered an O(1) alternative. |
 
 ## Two-Pointers
 
