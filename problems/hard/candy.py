@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def candy(self, ratings: List[int]) -> int:
-        def steep(i):
+        def slope(i):
             if i < 0 or i >= n:
                 return None
 
@@ -16,7 +16,7 @@ class Solution:
 
         n = len(ratings)
 
-        steep_arr = [steep(i) for i in range(n - 1)]
+        steep_arr = [slope(i) for i in range(n - 1)]
 
         candies = [1] * n
 
