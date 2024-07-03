@@ -34,6 +34,7 @@ pytest
 | 135 | [Candy](https://leetcode.com/problems/candy/)                                                  | [Python](./problems/hard/candy.py)                                                                                       | _O(n)_     | _O(n)_           | Hard       |     | Enjoyed solving it!                                                                       |
 | 42  | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                      | [Python _O(n)_](./problems/hard/trapping_rain_water_o_n.py), [Python _O(1)_](./problems/hard/trapping_rain_water_o_1.py) | _O(n)_     | _O(n)_ or _O(1)_ | Hard       |     | Initially proposed an O(n) space complexity solution, but discovered an O(1) alternative. |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/submissions/1307359650/) | [Python](./problems/easy/contains_duplicate.py)                                                                          | _O(n)_     | _O(n)_           | Easy       |     |                                                                                           |
+| 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)                      | [Python](./problems/easy/valid_anagram.py)                                                                               | _O(n)_     | _O(n)_           | Easy       |     | given Unicode characters support for Python3, the follow-up question is irrelevant        |
 
 ## Two-Pointers
 
