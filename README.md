@@ -44,10 +44,11 @@ pytest
 
 ## Two-Pointers
 
-| #   | Title                                                                                                 | Solution                                                        | Time   | Space  | Difficulty | Tag | Note |
-| --- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------ | ------ | ---------- | --- | ---- |
-| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                   | [Python](./problems/easy/valid_palindrome.py)                   | _O(n)_ | _O(1)_ | Easy       |     |      |
-| 167 | [Two Sum II - Input Array is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Python](./problems/medium/two_sum_ii_input_array_is_sorted.py) | _O(n)_ | _O(1)_ | Medium     |     |      |
+| #   | Title                                                                                                 | Solution                                                        | Time     | Space  | Difficulty | Tag | Note |
+| --- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | -------- | ------ | ---------- | --- | ---- |
+| 15  | [3Sum](https://leetcode.com/problems/3sum/)                                                           | [Python](./problems/medium/three_sum.py)                        | _O(n^2)_ | _O(1)_   | Medium     |     |      |
+| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                   | [Python](./problems/easy/valid_palindrome.py)                   | _O(n)_   | _O(1)_ | Easy       |     |      |
+| 167 | [Two Sum II - Input Array is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Python](./problems/medium/two_sum_ii_input_array_is_sorted.py) | _O(n)_   | _O(1)_ | Medium     |     |      |
 
 ## Sliding-Window
 
