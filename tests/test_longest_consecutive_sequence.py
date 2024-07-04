@@ -11,3 +11,13 @@ def test_sample_one():
 def test_sample_two():
     nums = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
     assert solution.longestConsecutive(nums) == 9
+
+
+def test_sample_three():
+    nums = [0]
+    assert solution.longestConsecutive(nums) == 1
+
+
+def test_sample_four():
+    nums = []
+    assert solution.longestConsecutive(nums) == 0
