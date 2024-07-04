@@ -53,10 +53,11 @@ pytest
 
 ## Sliding-Window
 
-| #   | Title                                                                                                         | Solution                                                     | Time   | Space  | Difficulty | Tag | Note |
-| --- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------ | ------ | ---------- | --- | ---- |
-| 121 | [Best Time to But and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) | [Python](./problems/easy/best_time_to_buy_and_sell_stock.py) | _O(n)_ | _O(1)_ | Easy       |     |      |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)                         | [Python](./problems/medium/minimum_size_subarray_sum.py)     | _O(n)_ | _O(1)_ | Medium     |     |      |
+| #   | Title                                                                                                                           | Solution                                                                      | Time   | Space                                                                          | Difficulty | Tag | Note                                                                         |
+| --- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------ | ---------- | --- | ---------------------------------------------------------------------------- |
+| 3   | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Python](./problems/medium/longest_substring_without_repeating_characters.py) | _O(n)_ | _O(min(n, m))_ n being size of the string and m being the size of the alphabet | Medium     |     | A better solution would be to jump to the point where we have a valid string |
+| 121 | [Best Time to But and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)                               | [Python](./problems/easy/best_time_to_buy_and_sell_stock.py)                  | _O(n)_ | _O(1)_                                                                         | Easy       |     |                                                                              |
+| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)                                           | [Python](./problems/medium/minimum_size_subarray_sum.py)                      | _O(n)_ | _O(1)_                                                                         | Medium     |     |                                                                              |
 
 ## Matrix
 
