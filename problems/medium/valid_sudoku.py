@@ -19,8 +19,8 @@ class Solution(object):
                     return False
         return True
 
-    def isValid(self, value):
-        res = [i for i in value if i != "."]
+    def isValid(self, cells):
+        res = [i for i in cells if i != "."]
         return len(res) == len(set(res))
 
     def isValidSudoku(self, board):
