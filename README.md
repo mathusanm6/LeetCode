@@ -63,6 +63,13 @@ pytest
 | 424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)               | [Python](./problems/medium/longest_repeating_character_replacement.py)        | _O(n)_                                                    | _O(1)_                                                                              | Medium     |     |                                                                              |
 | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/)                                                   | [Python](./problems/medium/permutation_in_string.py)                          | _O(n)_, _n_ being the length of s2                        | _O(k)_, _k_ being the length of s1                                                  | Medium     |     |                                                                              |
 
+## Stack
+
+| #   | Title                                                                 | Solution                                       | Time   | Space  | Difficulty | Tag | Note |
+| --- | --------------------------------------------------------------------- | ---------------------------------------------- | ------ | ------ | ---------- | --- | ---- |
+| 20  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [Python](./problems/easy/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy       |     |      |
+|155 | [Min Stack](https://leetcode.com/problems/min-stack/) | [Python](./problems/medium/min_stack.py) | _O(1)_ | _O(1)_ | Medium | | Tuple in stack is interesting ! |
+
 ## Matrix
 
 | #   | Title                                                       | Solution                                    | Time   | Space  | Difficulty | Tag | Note |
@@ -74,12 +81,6 @@ pytest
 | #   | Title                                                           | Solution                                    | Time   | Space  | Difficulty | Tag | Note |
 | --- | --------------------------------------------------------------- | ------------------------------------------- | ------ | ------ | ---------- | --- | ---- |
 | 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Python](./problems/easy/summary_ranges.py) | _O(n)_ | _O(n)_ | Easy       |     |      |
-
-## Stack
-
-| #   | Title                                                                 | Solution                                       | Time   | Space  | Difficulty | Tag | Note |
-| --- | --------------------------------------------------------------------- | ---------------------------------------------- | ------ | ------ | ---------- | --- | ---- |
-| 20  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [Python](./problems/easy/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy       |     |      |
 
 ## Linked-List
 
