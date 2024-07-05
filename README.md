@@ -18,12 +18,12 @@ pytest
 - [Two Pointers](#two-pointers)
 - [Sliding Window](#sliding-window)
 - [Stack](#stack)
-- [Matrix](https://github.com/mathusanMe/LeetCode#Matrix)
-- [Intervals](https://github.com/mathusanMe/LeetCode#Intervals)
-- [Linked List](https://github.com/mathusanMe/LeetCode#Linked-List)
-- [Binary Tree General](https://github.com/mathusanMe/LeetCode#Binary-Tree-General)
-- [Binary Search Tree](https://github.com/mathusanMe/LeetCode#Binary-Search-Tree)
-- [Graph General](https://github.com/mathusanMe/LeetCode#Graph-General)
+- [Matrix](#matrix)
+- [Intervals](#intervals)
+- [Linked List](#linked-list)
+- [Binary Tree General](#binary-tree-general)
+- [Binary Search Tree](#binary-search-tree)
+- [Graph General](#graph-general)
 
 ## Arrays & Hashing
 
