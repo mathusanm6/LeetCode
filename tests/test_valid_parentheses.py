@@ -1,33 +1,38 @@
 from problems.easy.valid_parentheses import Solution
 
+solution = Solution()
 
-def test_valid_parentheses():
-    solution = Solution
 
-    # Test Case 1
+def test_sample_one():
     s = "()"
-    assert solution.isValid(solution, s) is True
+    assert solution.isValid(s)
 
-    # Test Case 2
+
+def test_sample_two():
     s = "()[]{}"
-    assert solution.isValid(solution, s) is True
+    assert solution.isValid(s)
 
-    # Test Case 3
+
+def test_sample_three():
     s = "(]"
-    assert solution.isValid(solution, s) is False
+    assert not solution.isValid(s)
 
-    # Test Case 4
+
+def test_sample_four():
     s = "([)]"
-    assert solution.isValid(solution, s) is False
+    assert not solution.isValid(s)
 
-    # Test Case 5
+
+def test_sample_five():
     s = "{[]}"
-    assert solution.isValid(solution, s) is True
+    assert solution.isValid(s)
 
-    # Test Case 6
+
+def test_sample_six():
     s = ""
-    assert solution.isValid(solution, s) is True
+    assert solution.isValid(s)
 
-    # Test Case 7
+
+def test_sample_seven():
     s = "]([])"
-    assert solution.isValid(solution, s) is False
+    assert not solution.isValid(s)
