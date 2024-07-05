@@ -14,12 +14,12 @@ pytest
 
 ## Algorithms
 
-- [Arrays & Hashing](https://github.com/mathusanMe/LeetCode#Arrays--Hashing)
-- [Two Pointers](https://github.com/mathusanMe/LeetCode#Two-Pointers)
-- [Sliding Window](https://github.com/mathusanMe/LeetCode#Sliding-Window)
+- [Arrays & Hashing](#arrays--hashing)
+- [Two Pointers](#two-pointers)
+- [Sliding Window](#sliding-window)
+- [Stack](#stack)
 - [Matrix](https://github.com/mathusanMe/LeetCode#Matrix)
 - [Intervals](https://github.com/mathusanMe/LeetCode#Intervals)
-- [Stack](https://github.com/mathusanMe/LeetCode#Stack)
 - [Linked List](https://github.com/mathusanMe/LeetCode#Linked-List)
 - [Binary Tree General](https://github.com/mathusanMe/LeetCode#Binary-Tree-General)
 - [Binary Search Tree](https://github.com/mathusanMe/LeetCode#Binary-Search-Tree)
