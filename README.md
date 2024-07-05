@@ -65,10 +65,11 @@ pytest
 
 ## Stack
 
-| #   | Title                                                                 | Solution                                       | Time   | Space  | Difficulty | Tag | Note |
-| --- | --------------------------------------------------------------------- | ---------------------------------------------- | ------ | ------ | ---------- | --- | ---- |
-| 20  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [Python](./problems/easy/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy       |     |      |
-|155 | [Min Stack](https://leetcode.com/problems/min-stack/) | [Python](./problems/medium/min_stack.py) | _O(1)_ | _O(1)_ | Medium | | Tuple in stack is interesting ! |
+| #   | Title                                                                                               | Solution                                       | Time   | Space  | Difficulty | Tag | Note                            |
+| --- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------ | ------ | ---------- | --- | ------------------------------- |
+| 20  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)                               | [Python](./problems/easy/valid_parentheses.py) | _O(n)_ | _O(n)_ | Easy       |     |                                 |
+| 150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | [Python](./problems/medium/evaluate_reverse_polish_notation.py) | _O(n)_                                         | _O(n)_ | Medium |            |     |
+| 155 | [Min Stack](https://leetcode.com/problems/min-stack/)                                               | [Python](./problems/medium/min_stack.py)       | _O(1)_ | _O(1)_ | Medium     |     | Tuple in stack is interesting ! |
 
 ## Matrix
 
