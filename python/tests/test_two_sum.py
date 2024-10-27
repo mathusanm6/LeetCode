@@ -20,6 +20,7 @@ def test_sample_three():
     target = 6
     assert solution.twoSum(nums, target) == [0, 1]
 
+
 def test_sample_four():
     nums = [-3, 1, 2, 3]
     target = 0

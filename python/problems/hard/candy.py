@@ -20,12 +20,12 @@ class Solution:
 
         candies = [1] * n
 
-        for l in range(n - 1):
-            if steep_arr[l] == 1 and candies[l + 1] <= candies[l]:
-                candies[l + 1] = candies[l] + 1
+        for left in range(n - 1):
+            if steep_arr[left] == 1 and candies[left + 1] <= candies[left]:
+                candies[left + 1] = candies[left] + 1
 
-        for r in range(n - 1, 0, -1):
-            if steep_arr[r - 1] == -1 and candies[r] >= candies[r - 1]:
-                candies[r - 1] = candies[r] + 1
+        for right in range(n - 1, 0, -1):
+            if steep_arr[right - 1] == -1 and candies[right] >= candies[right - 1]:
+                candies[right - 1] = candies[right] + 1
 
         return sum(candies)

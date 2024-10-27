@@ -11,7 +11,7 @@ class Solution(object):
                 if close[i] == c:
                     return open_[i]
             return None
-    
+
         stack = []
         for c in s:
             if isOpenBracket(c):

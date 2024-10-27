@@ -3,7 +3,6 @@ from problems.hard.trapping_rain_water_o_1 import Solution as trap_o_1
 
 
 def test_trapping_rain_water():
-
     # Test Case 1
     height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
     assert trap_o_n().trap(height) == 6
