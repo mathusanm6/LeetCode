@@ -2,6 +2,7 @@ from problems.medium.valid_sudoku import Solution
 
 solution = Solution()
 
+
 def test_valid_sudoku():
     board = [
         ["5", "3", ".", ".", "7", ".", ".", ".", "."],
@@ -15,6 +16,7 @@ def test_valid_sudoku():
         [".", ".", ".", ".", "8", ".", ".", "7", "9"],
     ]
     assert solution.isValidSudoku(board)
+
 
 def test_not_valid_sudoku():
     board = [

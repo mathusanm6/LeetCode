@@ -5,7 +5,7 @@ class Solution:
     def trap(self, height: List[int]) -> int:
         n = len(height)
 
-        leftmost = [0] * n      # O(n) space
+        leftmost = [0] * n  # O(n) space
         rightmost = [0] * n
 
         for i in range(1, n):

@@ -14,20 +14,20 @@ class Solution(object):
                 return True
             return False
 
-        l, r = 0, len(s) - 1
+        left, right = 0, len(s) - 1
         s = s.lower()
 
-        while l < r:
-            s_l, s_r = s[l], s[r]
+        while left < right:
+            s_l, s_r = s[left], s[right]
             if not isAlnumChar(s_l):
-                l += 1
+                left += 1
                 continue
             if not isAlnumChar(s_r):
-                r -= 1
+                right -= 1
                 continue
 
             if s_l != s_r:
                 return False
-            l += 1
-            r -= 1
+            left += 1
+            right -= 1
         return True
