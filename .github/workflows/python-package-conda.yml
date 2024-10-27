@@ -3,7 +3,7 @@ name: Python Lint & Test
 on: [push]
 
 jobs:
-  build:
+  build-python:
     runs-on: ubuntu-latest
     strategy:
       matrix:
