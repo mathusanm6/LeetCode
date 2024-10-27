@@ -1,0 +1,9 @@
+# Upgrade pip to avoid compatibility issues
+pip>=21.0
+
+# Linting and formatting tools
+ruff
+
+# Testing tools
+pytest
+pytest-cov
