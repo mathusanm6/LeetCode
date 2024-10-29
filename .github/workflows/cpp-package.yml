@@ -9,7 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: make
-        run: make all
+        run: |
+          cd cpp
+          make all
       
       - name: format
         run: make format
