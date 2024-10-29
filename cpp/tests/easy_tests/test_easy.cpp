@@ -8,5 +8,5 @@ void test_easy()
 {
     testTwoSum();
 
-    std::cout << "All easy tests passed!" << std::endl;
+    std::cout << "\033[0;33mAll easy tests passed\033[0m" << std::endl;
 }
