@@ -14,10 +14,16 @@ jobs:
           make all
       
       - name: format
-        run: make format
+        run: |
+          cd cpp
+          make format
       
       - name: run_tests
-        run: make run_tests
+        run: |
+          cd cpp
+          make run_tests
       
       - name: clean
-        run: make clean
+        run: |
+          cd cpp
+          make clean
