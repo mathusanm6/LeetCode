@@ -10,7 +10,6 @@ int main()
     test_medium();
     test_hard();
 
-    std::cout << "All tests passed!" << std::endl;
-
+    std::cout << "\033[1;32m[All tests passed]\033[0m" << std::endl;
     return 0;
 }

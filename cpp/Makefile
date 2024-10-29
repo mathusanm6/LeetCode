@@ -52,7 +52,7 @@ $(BUILD_DIR)/tests: $(PROBLEM_OBJS) $(TEST_OBJS) $(MAIN_OBJ)
 # Run tests
 run_tests: $(BUILD_DIR)/tests
 	@echo "$(GREEN)Running all tests...$(NC)"
-	$(BUILD_DIR)/tests
+	@$(BUILD_DIR)/tests
 
 # Formatting
 format:

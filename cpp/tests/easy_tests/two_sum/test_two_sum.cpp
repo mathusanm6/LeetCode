@@ -31,5 +31,5 @@ void testTwoSum()
     test_two();
     test_three();
 
-    std::cout << "All two sum tests passed!" << std::endl;
+    std::cout << "Two sum tests passed" << std::endl;
 }
