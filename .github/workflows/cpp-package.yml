@@ -1,0 +1,21 @@
+name: Cpp Format & Test
+
+on: [push]
+
+jobs:
+  build-cpp:
+    runs-on: ubuntu-latest
+        
+    steps:
+      - uses: actions/checkout@v4
+      - name: make
+        run: make all
+      
+      - name: format
+        run: make format
+      
+      - name: run_tests
+        run: make run_tests
+      
+      - name: clean
+        run: make clean
