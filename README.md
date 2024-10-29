@@ -1,5 +1,7 @@
 # Leetcode
 
+[![Cpp Format & Test](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-package.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-package.yml)
+
 [![Python CI (conda)](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml)
 
 ## Description
