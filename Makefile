@@ -123,7 +123,7 @@ test-py\:%:
 		echo "Running all Python tests..."; \
 		for dir in $(PROBLEM_DIRS); do \
 			if [ -f $$dir/*_test.py ]; then \
-				cd $$dir && $(PYTEST) *_test.py --color=yes 2>/dev/null | tail -n +7; \
+				cd $$dir && $(PYTEST) *_test.py --color=yes 2>/dev/null | tail -n +6; \
 				cd - > /dev/null; \
 			fi; \
 		done; \
