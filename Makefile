@@ -87,32 +87,48 @@ test\:%:
 test-cpp\:%:
 	@if [ "$*" = "all" ]; then \
 		echo "Running all C++ tests..."; \
+		overall_result=0; \
 		for dir in $(PROBLEM_DIRS); do \
 			if [ -f $$dir/*_test.cc ]; then \
 				echo "$(call color_blue,Testing C++ in $$dir...)"; \
 				$(CXX) $(CXXFLAGS) $(DEBUG_LDFLAGS) $(TEST_LDFLAGS) -I$(COMMON_DIR) -I$$dir -o $$dir/test_runner $$dir/*.cc; \
 				if [ $$? -eq 0 ]; then \
-					cd $$dir && ./test_runner --gtest_brief=1 --gtest_color=yes 2>/dev/null | tail -n +2; \
+					cd $$dir && ./test_runner --gtest_brief=1 --gtest_color=yes; \
+					test_result=$$?; \
+					if [ $$test_result -ne 0 ]; then \
+						overall_result=$$test_result; \
+					fi; \
 					rm -f $$dir/test_runner; \
+					cd - > /dev/null; \
 				else \
 					echo "$(call color_red,Failed to compile tests in $$dir)"; \
+					overall_result=1; \
 				fi; \
 				if [ "$$dir" != "$(lastword $(PROBLEM_DIRS))" ]; then \
 					echo ""; \
 				fi; \
 			fi; \
 		done; \
+		make clean SILENT=true; \
+		exit $$overall_result; \
 	else \
 		snake_case_name=$(call kebab_to_snake,$*); \
 		if [ -f $(PROBLEMS_DIR)/$$snake_case_name/$${snake_case_name}_test.cc ]; then \
 			echo "$(call color_blue,Running C++ tests for $*...)"; \
 			$(CXX) $(CXXFLAGS) $(DEBUG_LDFLAGS) $(TEST_LDFLAGS) -I$(COMMON_DIR) -I$(PROBLEMS_DIR)/$$snake_case_name -o $(PROBLEMS_DIR)/$$snake_case_name/test_runner $(PROBLEMS_DIR)/$$snake_case_name/*.cc; \
 			if [ $$? -eq 0 ]; then \
-				cd $(PROBLEMS_DIR)/$$snake_case_name && ./test_runner --gtest_color=yes 2>/dev/null | tail -n +2; \
+				cd $(PROBLEMS_DIR)/$$snake_case_name && ./test_runner --gtest_color=yes; \
+				test_result=$$?; \
 				rm -f $(PROBLEMS_DIR)/$$snake_case_name/test_runner; \
+				cd - > /dev/null; \
+				exit $$test_result; \
 			else \
 				echo "$(call color_red,Failed to compile tests for $*)"; \
+				exit 1; \
 			fi; \
+		else \
+			echo "$(call color_red,No C++ test file found for $*.)"; \
+			exit 1; \
 		fi; \
 	fi
 	@make clean SILENT=true
@@ -121,19 +137,29 @@ test-cpp\:%:
 test-py\:%:
 	@if [ "$*" = "all" ]; then \
 		echo "Running all Python tests..."; \
+		overall_result=0; \
 		for dir in $(PROBLEM_DIRS); do \
 			if [ -f $$dir/*_test.py ]; then \
-				cd $$dir && $(PYTEST) *_test.py --color=yes 2>/dev/null | tail -n +6; \
+				echo "$(call color_blue,Testing Python in $$dir...)"; \
+				cd $$dir && $(PYTEST) *_test.py --color=yes -v; \
+				test_result=$$?; \
+				if [ $$test_result -ne 0 ]; then \
+					overall_result=$$test_result; \
+				fi; \
 				cd - > /dev/null; \
+				echo ""; \
 			fi; \
 		done; \
+		make clean SILENT=true; \
+		exit $$overall_result; \
 	else \
 		snake_case_name=$(call kebab_to_snake,$*); \
 		if [ -f $(PROBLEMS_DIR)/$$snake_case_name/$${snake_case_name}_test.py ]; then \
 			echo "$(call color_blue,Running Python tests for $*...)"; \
-			cd $(PROBLEMS_DIR)/$$snake_case_name && $(PYTEST) $${snake_case_name}_test.py -v --color=yes 2>/dev/null | tail -n +8; \
+			cd $(PROBLEMS_DIR)/$$snake_case_name && $(PYTEST) $${snake_case_name}_test.py -v --color=yes; \
 		else \
 			echo "$(call color_red,No Python test file found for $*.)"; \
+			exit 1; \
 		fi; \
 	fi
 	@make clean SILENT=true
@@ -151,7 +177,7 @@ format:
 .PHONY: format-cpp
 format-cpp:
 	@echo "Formatting C++ files..."
-	@if command -v clang-format >/dev/null 2>&1; then \
+	@if command -v clang-format >/dev/null; then \
 		find $(COMMON_DIR) $(PROBLEMS_DIR) -name '*.cc' -o -name '*.h' | xargs clang-format -i; \
 		echo "$(call color_green,C++ files formatted.)"; \
 	else \
@@ -161,10 +187,10 @@ format-cpp:
 .PHONY: format-python
 format-python:
 	@echo "Formatting Python files..."
-	@if command -v ruff >/dev/null 2>&1; then \
+	@if command -v ruff >/dev/null; then \
 		ruff format $(PROBLEMS_DIR); \
 		echo "$(call color_green,Python files formatted with ruff.)"; \
-	elif command -v black >/dev/null 2>&1; then \
+	elif command -v black >/dev/null; then \
 		find $(PROBLEMS_DIR) -name '*.py' | xargs black; \
 		echo "$(call color_green,Python files formatted with black.)"; \
 	else \
@@ -180,7 +206,7 @@ lint:
 .PHONY: lint-cpp
 lint-cpp:
 	@echo "Linting C++ files..."
-	@if command -v clang-tidy >/dev/null 2>&1; then \
+	@if command -v clang-tidy >/dev/null; then \
 		find $(PROBLEMS_DIR) $(COMMON_DIR) -type f \( -name '*.cc' -o -name '*.h' \) | while read -r file; do \
 			clang-tidy "$$file" -- $(CXXFLAGS) -x c++ || true; \
 		done; \
@@ -192,10 +218,10 @@ lint-cpp:
 .PHONY: lint-python
 lint-python:
 	@echo "Linting Python files..."
-	@if command -v ruff >/dev/null 2>&1; then \
+	@if command -v ruff >/dev/null; then \
 		ruff check $(PROBLEMS_DIR); \
 		echo "$(call color_green,Python linting complete with ruff.)"; \
-	elif command -v flake8 >/dev/null 2>&1; then \
+	elif command -v flake8 >/dev/null; then \
 		find $(PROBLEMS_DIR) -name '*.py' | xargs flake8; \
 		echo "$(call color_green,Python linting complete with flake8.)"; \
 	else \
