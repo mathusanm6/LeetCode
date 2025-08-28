@@ -17,15 +17,51 @@ PYTEST = pytest
 # Compiler and Linker Flags
 # =============================================================================
 
-# Google Test library path
-GTEST_LIB_PATH = -I$(shell brew --prefix googletest)/include
-GTEST_LINK_PATH = -L$(shell brew --prefix googletest)/lib
+# Detect operating system and set Google Test paths accordingly
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	# macOS with Homebrew
+	GTEST_LIB_PATH = -I$(shell brew --prefix googletest)/include
+	GTEST_LINK_PATH = -L$(shell brew --prefix googletest)/lib
+else ifeq ($(UNAME_S),Linux)
+	# Linux - check for common installation paths
+	ifneq ($(wildcard /usr/include/gtest),)
+		# System-wide installation (apt install libgtest-dev)
+		GTEST_LIB_PATH = -I/usr/include
+		GTEST_LINK_PATH = -L/usr/lib/x86_64-linux-gnu
+	else ifneq ($(wildcard /usr/local/include/gtest),)
+		# Local installation
+		GTEST_LIB_PATH = -I/usr/local/include
+		GTEST_LINK_PATH = -L/usr/local/lib
+	else
+		# Fallback - assume pkg-config can find it
+		GTEST_LIB_PATH = $(shell pkg-config --cflags gtest 2>/dev/null || echo "")
+		GTEST_LINK_PATH = $(shell pkg-config --libs-only-L gtest 2>/dev/null || echo "")
+	endif
+else
+	# Other systems - try pkg-config
+	GTEST_LIB_PATH = $(shell pkg-config --cflags gtest 2>/dev/null || echo "")
+	GTEST_LINK_PATH = $(shell pkg-config --libs-only-L gtest 2>/dev/null || echo "")
+endif
 
 # CXXFLAGS: C++20 standard, all warnings, warning pedantic mode, include common and problems directories
 CXXFLAGS = -std=c++20 -Wall -Wextra -Wpedantic -I$(COMMON_DIR) -I$(PROBLEMS_DIR) $(GTEST_LIB_PATH)
 
 # LDFLAGS
-TEST_LDFLAGS = $(GTEST_LINK_PATH) -lgtest -lgtest_main -pthread
+ifeq ($(UNAME_S),Linux)
+	# On Linux, we might need to link against both gtest and gtest_main
+	# Check if libgtest.a exists, otherwise try -lgtest
+	ifneq ($(wildcard /usr/lib/x86_64-linux-gnu/libgtest.a),)
+		TEST_LDFLAGS = $(GTEST_LINK_PATH) /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a -pthread
+	else ifneq ($(wildcard /usr/local/lib/libgtest.a),)
+		TEST_LDFLAGS = $(GTEST_LINK_PATH) /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a -pthread
+	else
+		TEST_LDFLAGS = $(GTEST_LINK_PATH) -lgtest -lgtest_main -pthread
+	endif
+else
+	# macOS and other systems
+	TEST_LDFLAGS = $(GTEST_LINK_PATH) -lgtest -lgtest_main -pthread
+endif
 DEBUG_LDFLAGS = -g -DDEBUG
 
 # =============================================================================
@@ -212,6 +248,44 @@ stats:
 	@echo "Available problems:"
 	@for prob in $(SNAKE_CASE_PROBLEM_NAMES); do echo "  $(call color_cyan,- $$prob)"; done
 
+# Debug Google Test configuration
+.PHONY: debug-gtest
+debug-gtest:
+	@echo "=== Google Test Configuration Debug ==="
+	@echo "$(call color_green,Operating System:) $(UNAME_S)"
+	@echo "$(call color_green,Google Test Include Path:) $(GTEST_LIB_PATH)"
+	@echo "$(call color_green,Google Test Link Path:) $(GTEST_LINK_PATH)"
+	@echo "$(call color_green,Test Linker Flags:) $(TEST_LDFLAGS)"
+	@echo ""
+	@echo "$(call color_yellow,Checking Google Test installation:)"
+	@if [ "$(UNAME_S)" = "Darwin" ]; then \
+		if command -v brew >/dev/null 2>&1; then \
+			if brew list googletest >/dev/null 2>&1; then \
+				echo "$(call color_green,✓ Google Test installed via Homebrew)"; \
+			else \
+				echo "$(call color_red,✗ Google Test not found via Homebrew. Install with: brew install googletest)"; \
+			fi; \
+		else \
+			echo "$(call color_red,✗ Homebrew not found)"; \
+		fi; \
+	elif [ "$(UNAME_S)" = "Linux" ]; then \
+		if [ -f /usr/include/gtest/gtest.h ]; then \
+			echo "$(call color_green,✓ Google Test headers found in /usr/include)"; \
+		elif [ -f /usr/local/include/gtest/gtest.h ]; then \
+			echo "$(call color_green,✓ Google Test headers found in /usr/local/include)"; \
+		else \
+			echo "$(call color_red,✗ Google Test headers not found. Install with: sudo apt-get install libgtest-dev)"; \
+		fi; \
+		if [ -f /usr/lib/x86_64-linux-gnu/libgtest.a ] || [ -f /usr/lib/x86_64-linux-gnu/libgtest.so ]; then \
+			echo "$(call color_green,✓ Google Test libraries found in /usr/lib/x86_64-linux-gnu)"; \
+		elif [ -f /usr/local/lib/libgtest.a ] || [ -f /usr/local/lib/libgtest.so ]; then \
+			echo "$(call color_green,✓ Google Test libraries found in /usr/local/lib)"; \
+		else \
+			echo "$(call color_red,✗ Google Test libraries not found)"; \
+			echo "$(call color_yellow,Try: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv *.a /usr/lib/)"; \
+		fi; \
+	fi
+
 # =============================================================================
 # Help and Documentation
 # =============================================================================
@@ -237,6 +311,7 @@ help:
 	@echo "$(call color_yellow,Utility Targets:)"
 	@echo "  clean              		- Clean build artifacts"
 	@echo "  stats              		- Show project statistics"
+	@echo "  debug-gtest        		- Debug Google Test configuration"
 	@echo "  help               		- Show this help message"
 	@echo ""
 	@echo "$(call color_green,Examples:)"
