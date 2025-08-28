@@ -34,7 +34,8 @@ from valid_palindrome import isPalindrome
         ("12345", False),  # Numeric non-palindrome
         ("a1b2c3c2b1a", True),  # Alphanumeric palindrome
         ("1a2b3c3c2b1a", False),  # Alphanumeric non-palindrome
-        (".,!@#$%^&*()", True),  # Only special characters (empty after cleaning)
+        (".,!@#$%^&*()", True),
+        # Only special characters (empty after cleaning)
         ("a.,!@#$%^&*()a", True),  # Palindrome with special chars in middle
         ("Dammit, I'm mad!", True),  # Another classic palindrome
         ("Step on no pets", True),  # Word-based palindrome
