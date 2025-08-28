@@ -12,13 +12,15 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgtest-dev cmake
+          sudo apt-get install -y libgtest-dev cmake build-essential
+          # Build and install Google Test libraries
           cd /usr/src/gtest
           sudo cmake CMakeLists.txt
           sudo make
-          sudo cp lib/*.a /usr/lib
-          sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a
-          sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+          sudo cp lib/*.a /usr/lib/x86_64-linux-gnu/
+
+      - name: Debug Google Test configuration
+        run: make debug-gtest
 
       - name: Format C++ code
         run: make format-cpp
