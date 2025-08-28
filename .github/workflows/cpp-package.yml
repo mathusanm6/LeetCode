@@ -12,12 +12,15 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgtest-dev cmake build-essential
-          # Build and install Google Test libraries
-          cd /usr/src/gtest
-          sudo cmake CMakeLists.txt
-          sudo make
-          sudo cp lib/*.a /usr/lib/x86_64-linux-gnu/
+          sudo apt-get install -y cmake build-essential
+          # Install Google Test from source - most reliable approach
+          git clone https://github.com/google/googletest.git --depth 1
+          cd googletest
+          mkdir build && cd build
+          cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_SHARED_LIBS=ON
+          make -j$(nproc)
+          sudo make install
+          sudo ldconfig
 
       - name: Debug Google Test configuration
         run: make debug-gtest
