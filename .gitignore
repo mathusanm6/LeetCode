@@ -167,3 +167,7 @@ build/
 *.exe
 *.out
 *.app
+
+# Test Runner
+test_runner
+test_runner.dSYM/
