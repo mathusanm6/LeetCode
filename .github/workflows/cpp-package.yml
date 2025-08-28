@@ -5,25 +5,29 @@ on: [push]
 jobs:
   build-cpp:
     runs-on: ubuntu-latest
-        
+
     steps:
       - uses: actions/checkout@v4
-      - name: make
+
+      - name: Install dependencies
         run: |
-          cd cpp
-          make all
-      
-      - name: format
-        run: |
-          cd cpp
-          make format
-      
-      - name: run_tests
-        run: |
-          cd cpp
-          make run_tests
-      
-      - name: clean
-        run: |
-          cd cpp
-          make clean
+          sudo apt-get update
+          sudo apt-get install -y libgtest-dev cmake
+          cd /usr/src/gtest
+          sudo cmake CMakeLists.txt
+          sudo make
+          sudo cp lib/*.a /usr/lib
+          sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a
+          sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+
+      - name: Format C++ code
+        run: make format-cpp
+
+      - name: Lint C++ code
+        run: make lint-cpp
+
+      - name: Run C++ tests
+        run: make test-cpp:all
+
+      - name: Clean
+        run: make clean
