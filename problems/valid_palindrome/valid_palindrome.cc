@@ -1,5 +1,7 @@
 #include "valid_palindrome.h"
 
+#include <algorithm>
+
 using std::string;
 
 bool isPalindrome(string s) {
