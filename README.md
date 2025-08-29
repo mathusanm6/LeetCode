@@ -5,12 +5,12 @@
 ### 🔬 Code Health & Testing
 
 [![C++ Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-cpp.yml?branch=main&label=C%2B%2B%20Tests&logo=cplusplus&logoColor=white&style=for-the-badge)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-cpp.yml)
-[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-py.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-py.yml)
+[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-python.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-python.yml)
 
 ### 🔍 Code Quality & Linting
 
 [![C++ Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-cpp.yml?branch=main&label=C%2B%2B%20Linter&logo=cplusplus&logoColor=white&style=for-the-badge&color=blue)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml)
-[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-py.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&color=blue)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-py.yml)
+[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-python.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&color=blue)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-python.yml)
 
 ### 📊 Repository Stats
 
