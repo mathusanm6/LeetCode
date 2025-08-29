@@ -78,10 +78,6 @@ jobs:
           echo "should_run_all_tests=$([ -n "$PYTHON_CONFIG_CHANGES" ] && \
             echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
 
-      - name: Format Python code
-        if: steps.detect-changes.outputs.has_python_changes == 'true'
-        run: make format-python
-
       - name: Lint Python code
         if: steps.detect-changes.outputs.has_python_changes == 'true'
         run: make lint-python
