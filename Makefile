@@ -121,6 +121,7 @@ test-cpp\:%:
 				test_result=$$?; \
 				rm -f $(PROBLEMS_DIR)/$$snake_case_name/test_runner; \
 				cd - > /dev/null; \
+				make clean SILENT=true; \
 				exit $$test_result; \
 			else \
 				echo "$(call color_red,Failed to compile tests for $*)"; \
@@ -141,7 +142,7 @@ test-py\:%:
 		for dir in $(PROBLEM_DIRS); do \
 			if [ -f $$dir/*_test.py ]; then \
 				echo "$(call color_blue,Testing Python in $$dir...)"; \
-				cd $$dir && $(PYTEST) *_test.py --color=yes -v; \
+				cd $$dir && $(PYTEST) *_test.py --color=yes; \
 				test_result=$$?; \
 				if [ $$test_result -ne 0 ]; then \
 					overall_result=$$test_result; \
