@@ -1,7 +1,10 @@
 # Leetcode
 
-[![Cpp Format & Test](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-package.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-package.yml)
-[![Python CI (conda)](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/mathusanMe/LeetCode/actions/workflows/python-package-conda.yml)
+[![Code Health (C++)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-cpp.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-cpp.yml)
+[![C++ Linter](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml)
+
+[![Code Health (Python)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-py.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-py.yml)
+[![Python Linter](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-py.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-py.yml)
 
 ## Description
 
@@ -11,21 +14,57 @@ This repository contains my solutions to LeetCode problems. I will be updating t
 
 ### Python Tests
 
-To run the Python test suite, use the following command in **the repository directory**:
+To run the Python test suite, use the following commands in **the repository directory**:
 
 ```bash
-pytest python
+# Run all Python tests
+make test-py:all
+
+# Run tests for a specific problem (e.g., two-sum)
+make test-py:two-sum
 ```
 
 ### C++ Tests
 
-To build and run the C++ test suite, use the following commands in the repository directory:
+To run the C++ test suite, use the following commands in the repository directory:
 
 ```bash
-cd cpp
-make all
-make run_tests
+# Run all C++ tests
+make test-cpp:all
+
+# Run tests for a specific problem (e.g., two-sum)
+make test-cpp:two-sum
+
+# Run both C++ and Python tests for all problems
+make test:all
 ```
+
+## Code Quality
+
+This project includes comprehensive code quality tools and automated linting:
+
+### Linting and Formatting
+
+```bash
+# Format all code (C++ and Python)
+make format
+
+# Lint all code (C++ and Python)
+make lint
+
+# Format/lint specific languages
+make format-cpp     # Format C++ files with clang-format
+make format-python  # Format Python files with ruff
+make lint-cpp       # Lint C++ files with clang-tidy
+make lint-python    # Lint Python files with ruff
+```
+
+### Continuous Integration
+
+- **Linters**: Automated code formatting and linting checks on every push/PR
+- **Presubmit**: Comprehensive testing of changed files before merge
+- **Postsubmit**: Full test suite execution after merge to main branch
+- All workflows leverage the project's Makefile for consistency
 
 ## Algorithms
 

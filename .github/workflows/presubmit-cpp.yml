@@ -89,10 +89,6 @@ jobs:
             [ -n "$COMMON_CHANGES" ] && echo 'true' || echo 'false')" >> \
              $GITHUB_OUTPUT
 
-      - name: Format C++ code
-        if: steps.detect-changes.outputs.has_cpp_changes == 'true'
-        run: make format-cpp
-
       - name: Lint C++ code
         if: steps.detect-changes.outputs.has_cpp_changes == 'true'
         run: make lint-cpp
