@@ -1,10 +1,24 @@
-# Leetcode
+# 🧮 LeetCode Solutions
 
-[![Code Health (C++)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-cpp.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-cpp.yml)
-[![C++ Linter](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml)
+<div align="center">
 
-[![Code Health (Python)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-py.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/postsubmit-py.yml)
-[![Python Linter](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-py.yml/badge.svg)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-py.yml)
+### 🔬 Code Health & Testing
+
+[![C++ Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-cpp.yml?branch=main&label=C%2B%2B%20Tests&logo=cplusplus&logoColor=white&style=for-the-badge)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-cpp.yml)
+[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-py.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-py.yml)
+
+### 🔍 Code Quality & Linting
+
+[![C++ Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-cpp.yml?branch=main&label=C%2B%2B%20Linter&logo=cplusplus&logoColor=white&style=for-the-badge&color=blue)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml)
+[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-py.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&color=blue)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-py.yml)
+
+### 📊 Repository Stats
+
+[![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white)](https://github.com/mathusanm6/LeetCode/commits/main)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-2-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-2-green?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+
+</div>
 
 ## Description
 

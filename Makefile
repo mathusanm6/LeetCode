@@ -263,6 +263,12 @@ stats:
 	@echo "Available problems:"
 	@for prob in $(SNAKE_CASE_PROBLEM_NAMES); do echo "  $(call color_cyan,- $$prob)"; done
 
+# Update README badges with current problem counts
+.PHONY: update-badges
+update-badges:
+	@echo "$(call color_green,Updating README badges...)"
+	@./scripts/update_badges.sh
+
 # Debug Google Test configuration
 .PHONY: debug-gtest
 debug-gtest:
@@ -329,6 +335,7 @@ help:
 	@echo "$(call color_yellow,Utility Targets:)"
 	@echo "  clean              		- Clean build artifacts"
 	@echo "  stats              		- Show project statistics"
+	@echo "  update-badges      		- Update README badges with current problem counts"
 	@echo "  debug-gtest        		- Debug Google Test configuration"
 	@echo "  help               		- Show this help message"
 	@echo ""

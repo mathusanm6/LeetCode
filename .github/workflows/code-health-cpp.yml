@@ -1,5 +1,5 @@
 ---
-name: Postsubmit (C++)
+name: Code Health (C++)
 
 on: # yamllint disable-line rule:truthy
   push:
