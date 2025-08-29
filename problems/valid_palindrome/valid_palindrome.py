@@ -1,9 +1,9 @@
 def isPalindrome(s: str) -> bool:
     left, right = 0, len(s) - 1
-    s = s.lower()
+    s_lower = s.lower()
 
     while left < right:
-        s_l, s_r = s[left], s[right]
+        s_l, s_r = s_lower[left], s_lower[right]
 
         if not s_l.isalnum():
             left += 1

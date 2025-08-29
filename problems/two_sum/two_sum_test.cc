@@ -3,20 +3,18 @@
 #include <gtest/gtest.h>
 #include <vector>
 
-using std::vector;
-
 struct TwoSumCase {
   const std::string test_name;
-  const vector<int> nums;
+  const std::vector<int> nums;
   const int target;
-  const vector<int> expected;
+  const std::vector<int> expected;
 };
 
 using TwoSumTest = ::testing::TestWithParam<TwoSumCase>;
 
 TEST_P(TwoSumTest, TestCases) {
   const TwoSumCase &test_case = GetParam();
-  const vector<int> result = twoSum(test_case.nums, test_case.target);
+  const std::vector<int> result = twoSum(test_case.nums, test_case.target);
   EXPECT_EQ(result, test_case.expected);
 }
 

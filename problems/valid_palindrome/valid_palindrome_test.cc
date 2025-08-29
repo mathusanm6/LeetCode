@@ -3,11 +3,9 @@
 #include <gtest/gtest.h>
 #include <string>
 
-using std::string;
-
 struct ValidPalindromeCase {
   const std::string test_name;
-  const string s;
+  const std::string s;
   const bool expected;
 };
 
