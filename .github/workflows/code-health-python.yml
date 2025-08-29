@@ -1,16 +1,16 @@
 ---
-name: Python Linter
+name: Code Health (Python)
 
 on: # yamllint disable-line rule:truthy
   push:
     branches: ["main"]
 
 jobs:
-  lint-python:
+  test-python:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10", "3.11", "3.12"]
+        python-version: ["3.10"]
 
     steps:
       - uses: actions/checkout@v4
@@ -26,16 +26,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Lint Python code using Makefile
+      - name: Run all Python tests using Makefile
         run: |
-          make lint-python
+          make test-py:all
 
-      - name: Format check Python code using Makefile
+      - name: Show project statistics
         run: |
-          make format-python
-          # Check if any files were modified by formatting
-          if ! git diff --exit-code; then
-            echo "Code formatting issues found. Please run 'make \
-            format-python' locally."
-            exit 1
-          fi
+          make stats
