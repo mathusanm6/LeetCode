@@ -209,7 +209,8 @@ lint-cpp:
 	@echo "Linting C++ files..."
 	@if command -v clang-tidy >/dev/null; then \
 		find $(PROBLEMS_DIR) $(COMMON_DIR) -type f \( -name '*.cc' -o -name '*.h' \) | while read -r file; do \
-			clang-tidy "$$file" -- $(CXXFLAGS) -x c++ || true; \
+			clang-tidy "$$file" --config-file=.clang-tidy --quiet -- $(CXXFLAGS) -x c++ 2>&1 | \
+			grep -v "warnings generated\|Suppressed.*warnings\|Use -header-filter\|Use -system-headers" || true; \
 		done; \
 		echo "$(call color_green,C++ linting complete.)"; \
 	else \
