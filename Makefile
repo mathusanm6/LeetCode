@@ -208,10 +208,9 @@ lint:
 lint-cpp:
 	@echo "Linting C++ files..."
 	@if command -v clang-tidy >/dev/null; then \
-		find $(PROBLEMS_DIR) $(COMMON_DIR) -type f \( -name '*.cc' -o -name '*.h' \) | while read -r file; do \
-			clang-tidy "$$file" --config-file=.clang-tidy --quiet -- $(CXXFLAGS) -x c++ 2>&1 | \
-			grep -v "warnings generated\|Suppressed.*warnings\|Use -header-filter\|Use -system-headers" || true; \
-		done; \
+		find $(PROBLEMS_DIR) $(COMMON_DIR) -type f \( -name '*.cc' -o -name '*.h' \) -print0 | \
+		xargs -0 -P 4 -I {} clang-tidy {} --config-file=.clang-tidy --quiet --header-filter="^(problems|common)/.*\\.(h|cc)$$" -- $(CXXFLAGS) -x c++ 2>/dev/null | \
+		grep -E "^[^:]+:[0-9]+:[0-9]+:" || true; \
 		echo "$(call color_green,C++ linting complete.)"; \
 	else \
 		echo "$(call color_red,clang-tidy not found. Please install it to lint C++ files.)"; \

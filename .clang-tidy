@@ -1,7 +1,15 @@
 ---
 # Configuration for clang-tidy
+# Use a focused set of checks instead of * to improve performance
 Checks: >
-  *,
+  bugprone-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  cert-*,
+  clang-analyzer-*,
+  misc-*,
   -abseil-*,
   -altera-*,
   -android-*,
@@ -20,7 +28,6 @@ Checks: >
   -cppcoreguidelines-avoid-c-arrays,
   -cppcoreguidelines-pro-bounds-constant-array-index,
   -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
-  -hicpp-no-array-decay,
   -cppcoreguidelines-avoid-magic-numbers,
   -readability-magic-numbers,
   -cert-err34-c,
@@ -33,8 +40,8 @@ Checks: >
   -bugprone-exception-escape,
   -cppcoreguidelines-avoid-const-or-ref-data-members
 
-# Exclude Google Test and external dependencies from analysis
-HeaderFilterRegex: "^(?!.*(gtest|googletest|gmock|third_party|external|vendor|/opt/homebrew/)).*"
+# Only analyze our source files, not system headers or external dependencies
+HeaderFilterRegex: "^(problems|common)/.*\\.(h|cc)$"
 
 CheckOptions:
   - key: readability-identifier-naming.NamespaceCase
