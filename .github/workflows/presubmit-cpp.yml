@@ -14,22 +14,6 @@ jobs:
         with:
           fetch-depth: 0 # Fetch full history for git diff
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y cmake build-essential clang-format clang-tidy
-          # Install Google Test from source - most reliable approach
-          git clone https://github.com/google/googletest.git --depth 1
-          cd googletest
-          mkdir build && cd build
-          cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_SHARED_LIBS=ON
-          make -j$(nproc)
-          sudo make install
-          sudo ldconfig
-
-      - name: Debug Google Test configuration
-        run: make debug-gtest
-
       - name: Detect changed C++ files
         id: detect-changes
         run: |
@@ -88,6 +72,30 @@ jobs:
           echo "should_run_all_tests=$([ -n "$CPP_CONFIG_CHANGES" ] || \
             [ -n "$COMMON_CHANGES" ] && echo 'true' || echo 'false')" >> \
              $GITHUB_OUTPUT
+
+      - name: Install dependencies
+        if: >
+          steps.detect-changes.outputs.has_cpp_changes == 'true' ||
+          steps.detect-changes.outputs.has_cpp_config_changes == 'true' ||
+          steps.detect-changes.outputs.has_common_changes == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake build-essential clang-format clang-tidy
+          # Install Google Test from source - most reliable approach
+          git clone https://github.com/google/googletest.git --depth 1
+          cd googletest
+          mkdir build && cd build
+          cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_SHARED_LIBS=ON
+          make -j$(nproc)
+          sudo make install
+          sudo ldconfig
+
+      - name: Debug Google Test configuration
+        if: >
+          steps.detect-changes.outputs.has_cpp_changes == 'true' ||
+          steps.detect-changes.outputs.has_cpp_config_changes == 'true' ||
+          steps.detect-changes.outputs.has_common_changes == 'true'
+        run: make debug-gtest
 
       - name: Lint C++ code
         if: steps.detect-changes.outputs.has_cpp_changes == 'true'
