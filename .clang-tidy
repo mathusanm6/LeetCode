@@ -12,6 +12,7 @@ Checks: >
   -readability-else-after-return,
   -readability-static-accessed-through-instance,
   -readability-avoid-const-params-in-decls,
+  -readability-identifier-length,
   -cppcoreguidelines-non-private-member-variables-in-classes,
   -misc-non-private-member-variables-in-classes,
   -modernize-use-trailing-return-type,
@@ -31,6 +32,9 @@ Checks: >
   -misc-use-anonymous-namespace,
   -bugprone-exception-escape,
   -cppcoreguidelines-avoid-const-or-ref-data-members
+
+# Exclude Google Test and external dependencies from analysis
+HeaderFilterRegex: "^(?!.*(gtest|googletest|gmock|third_party|external|vendor|/opt/homebrew/)).*"
 
 CheckOptions:
   - key: readability-identifier-naming.NamespaceCase
