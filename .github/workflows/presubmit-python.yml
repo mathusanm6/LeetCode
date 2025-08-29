@@ -44,8 +44,12 @@ jobs:
           CHANGED_PYTHON_FILES=$(echo "$CHANGED_FILES" | \
             grep '\.py$' || true)
 
+          # Filter for Python files specifically in the problems directory
+          CHANGED_PYTHON_PROBLEMS_FILES=$(echo "$CHANGED_PYTHON_FILES" | \
+            grep -E '^problems/' || true)
+
           # Extract unique problem directories from changed Python files
-          CHANGED_PROBLEMS=$(echo "$CHANGED_PYTHON_FILES" | \
+          CHANGED_PROBLEMS=$(echo "$CHANGED_PYTHON_PROBLEMS_FILES" | \
             grep -E '^problems/[^/]+/' | cut -d'/' -f2 | \
             sort -u | tr '\n' ' ' || true)
 
@@ -55,12 +59,14 @@ jobs:
 
           echo "Changed Python files:"
           echo "$CHANGED_PYTHON_FILES"
+          echo "Changed Python files in problems/:"
+          echo "$CHANGED_PYTHON_PROBLEMS_FILES"
           echo "Changed problems: $CHANGED_PROBLEMS"
           echo "Python config changes: $PYTHON_CONFIG_CHANGES"
 
           # Set outputs
           echo "changed_problems=$CHANGED_PROBLEMS" >> $GITHUB_OUTPUT
-          echo "has_python_changes=$([ -n "$CHANGED_PYTHON_FILES" ] && \
+          echo "has_python_changes=$([ -n "$CHANGED_PYTHON_PROBLEMS_FILES" ] && \
             echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
           echo "has_python_config_changes=$([ -n "$PYTHON_CONFIG_CHANGES" ] && \
             echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
@@ -118,7 +124,7 @@ jobs:
             "false" ] && \
             [ "${{ steps.detect-changes.outputs.has_python_config_changes }}" \
             = "false" ]; then
-            echo "- No Python files changed - skipped all tasks" >> \
+            echo "- No Python files in problems/ changed - skipped all tasks" >> \
             $GITHUB_STEP_SUMMARY
           elif [ "${{ steps.detect-changes.outputs.should_run_all_tests }}" = \
             "true" ]; then
