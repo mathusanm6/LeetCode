@@ -282,6 +282,7 @@ readme-check: ## Check if README is up to date
 	@if ! diff -q README.md README.md.backup > /dev/null; then \
 		echo "$(call color_yellow,README is out of date. Run 'make readme' to update.)"; \
 		mv README.md.backup README.md; \
+		exit 1; \
 	else \
 		echo "$(call color_green,README is up to date.)"; \
 		rm README.md.backup; \
