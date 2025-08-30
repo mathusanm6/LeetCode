@@ -278,7 +278,7 @@ class ReadmeGenerator:
                 config = self.load_problem_config(config_path)
                 if self.validate_problem_config(config):
                     valid_configs += 1
-            except:
+            except (yaml.YAMLError, FileNotFoundError, Exception):
                 pass
 
         print(Colors.green("✓ README updated successfully!"))
