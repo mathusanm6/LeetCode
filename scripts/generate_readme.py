@@ -100,6 +100,10 @@ class ReadmeGenerator:
 
         return True
 
+    def generate_anchor(self, tag: str) -> str:
+        """Generate a markdown anchor from a tag name."""
+        return tag.lower().replace(" ", "-").replace("&", "")
+
     def format_solutions(self, solutions: Dict[str, str]) -> str:
         """Format solution links for the table."""
         formatted_solutions = []
@@ -114,7 +118,7 @@ class ReadmeGenerator:
         toc_items = []
 
         for tag in tags:
-            tag_anchor = tag.lower().replace(" ", "-").replace("&", "")
+            tag_anchor = self.generate_anchor(tag)
             toc_items.append(f"- [{tag}](#{tag_anchor})")
 
         return "\n".join(toc_items)
@@ -152,7 +156,7 @@ class ReadmeGenerator:
             )
 
             # Create section header
-            tag_anchor = tag.lower().replace(" ", "-").replace("&", "")
+            tag_anchor = self.generate_anchor(tag)
             markdown_sections.append(f"## {tag}")
             markdown_sections.append("")
 

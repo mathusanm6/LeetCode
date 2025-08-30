@@ -101,15 +101,15 @@ make lint-python    # Lint Python files with ruff
 
 ## Arrays & Hashing
 
-| #   | Title                                             | Solution                                                                      | Time   | Space  | Difficulty | Tag | Note |
-| --- | ------------------------------------------------- | ----------------------------------------------------------------------------- | ------ | ------ | ---------- | --- | ---- |
-| 1   | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./problems/two_sum/two_sum.py), [C++](./problems/two_sum/two_sum.cc) | _O(n)_ | _O(n)_ | Easy       |     |      |
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---|-------|----------|------|-------|------------|-----|------|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./problems/two_sum/two_sum.py), [C++](./problems/two_sum/two_sum.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
 
 ## Two Pointers
 
-| #   | Title                                                               | Solution                                                                                                          | Time   | Space  | Difficulty | Tag | Note |
-| --- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------ | ------ | ---------- | --- | ---- |
-| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ | Easy       |     |      |
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---|-------|----------|------|-------|------------|-----|------|
+| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
 
 ## License
 
