@@ -7,3 +7,6 @@ ruff
 # Testing tools
 pytest
 pytest-cov
+
+# YAML processing library
+PyYAML

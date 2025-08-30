@@ -1,0 +1,17 @@
+problem:
+  number: 125
+  title: "Valid Palindrome"
+  leetcode_url: "https://leetcode.com/problems/valid-palindrome/"
+  difficulty: "easy"
+  tags: ["Two Pointers"]
+
+solutions:
+  python: "problems/valid_palindrome/valid_palindrome.py"
+  cpp: "problems/valid_palindrome/valid_palindrome.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""

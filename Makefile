@@ -265,8 +265,27 @@ stats:
 # Update README badges with current problem counts
 .PHONY: update-badges
 update-badges:
-	@echo "$(call color_green,Updating README badges...)"
+	@echo "Updating README badges..."
 	@./scripts/update_badges.sh
+	@echo "$(call color_green,README badges updated.)"
+
+# README Generation
+.PHONY: readme
+readme: ## Generate README from problem configurations
+	@$(PYTHON) scripts/generate_readme.py
+
+.PHONY: readme-check
+readme-check: ## Check if README is up to date
+	@echo "Checking if README is up to date..."
+	@cp README.md README.md.backup
+	@$(PYTHON) scripts/generate_readme.py > /dev/null
+	@if ! diff -q README.md README.md.backup > /dev/null; then \
+		echo "$(call color_yellow,README is out of date. Run 'make readme' to update.)"; \
+		mv README.md.backup README.md; \
+	else \
+		echo "$(call color_green,README is up to date.)"; \
+		rm README.md.backup; \
+	fi
 
 # Debug Google Test configuration
 .PHONY: debug-gtest
@@ -334,6 +353,8 @@ help:
 	@echo "$(call color_yellow,Utility Targets:)"
 	@echo "  clean              		- Clean build artifacts"
 	@echo "  stats              		- Show project statistics"
+	@echo "  readme             		- Generate README from problem configurations"
+	@echo "  readme-check       		- Check if README is up to date"
 	@echo "  update-badges      		- Update README badges with current problem counts"
 	@echo "  debug-gtest        		- Debug Google Test configuration"
 	@echo "  help               		- Show this help message"
